@@ -33,6 +33,7 @@ self.addEventListener('activate', function(event) {
 
 // 捕获请求并返回缓存数据
 self.addEventListener('fetch', function(event) {
+  console.log('读取')
   event.respondWith(caches.match(event.request).catch(function() {
     return fetch(event.request);
   }).then(function(response) {
