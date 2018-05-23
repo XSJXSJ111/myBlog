@@ -1,4 +1,4 @@
-var VERSION = 'v36';
+var VERSION = 'v37';
 
 // 缓存
 self.addEventListener('install', function(event) {
