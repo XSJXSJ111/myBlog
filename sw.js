@@ -41,6 +41,10 @@ self.addEventListener('fetch', function(event) {
     });
     return response.clone();
   }).catch(function() {
-    return caches.match('./mm1.jpg');
+    return cache.addAll([
+        './start.html',
+        './jquery-2.2.4.min.js',
+        './mm1.jpg'
+      ]);
   }));
 });
