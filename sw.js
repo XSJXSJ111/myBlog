@@ -1,4 +1,4 @@
-var VERSION = 'v28';
+var VERSION = 'v29';
 
 // 缓存
 self.addEventListener('install', function(event) {
@@ -41,10 +41,6 @@ self.addEventListener('fetch', function(event) {
     });
     return response.clone();
   }).catch(function() {
-    return cache.addAll([
-        './start.html',
-        './jquery-2.2.4.min.js',
-        './mm1.jpg'
-      ]);
+    return caches.match('./start.html');
   }));
 });
