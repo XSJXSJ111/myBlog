@@ -42,6 +42,6 @@ self.addEventListener('fetch', function(event) {
     });
     return response.clone();
   }).catch(function() {
-    return caches.match('./start.html');
+    return caches.match('./mm1.jpg');
   }));
 });
